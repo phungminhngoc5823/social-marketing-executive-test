@@ -201,7 +201,7 @@ VIDEOS["video-02"] = {
     "why": [
         ("Narrative choice", "A recurring answer card slides into the stack three times. Each return adds an orange tally beside the same question. The Project Lead changes the task: examine whom the explanation reaches, then build an audience-led brief. At CTA the question is circled instead of being presented as solved."),
         ("Raw Content Source Proof", "Step 1 identifies confusion; later design choices reflect literacy, language, emotional context and use. AMD qualitatively reports less time spent re-explaining basics and more on care decisions. NYU shows visual and multilingual colonoscopy-preparation guidance. The source assigns medical accuracy to client clinicians and the “can a patient still follow it” review to F.Learning."),
-        ("Selection / exclusion", "The story uses one familiar, fictional question that keeps coming back. It first asks which patients are getting stuck, then shows one clinical source adapted to their different needs, and backs this up with two real cases from the page: AMD and NYU Langone Health."),
+        ("Selection / exclusion", "The story uses one familiar, fictional question that keeps coming back. It first asks which patients are getting stuck, then shows one clinical source adapted to their different needs, and backs this up with two real cases from the raw content source: AMD and NYU Langone Health."),
     ],
 }
 

@@ -612,6 +612,8 @@ p, li, dd, blockquote { text-wrap: pretty; }
    ========================================================= */
 .section { padding: clamp(72px, 9vw, 120px) 0; }
 .section--overview { background: var(--white); }
+.section--brief { background: var(--white); border-top: 1px solid var(--slate-200); }
+.block--tight { margin-top: 32px; }
 
 .section__head {
   display: flex;
@@ -1826,6 +1828,10 @@ p, li, dd, blockquote { text-wrap: pretty; }
 @media (max-width: 1080px) {
   .nav__menu a:not(.btn) { padding: 8px 9px; font-size: 13.5px; }
 }
+@media (min-width: 961px) and (max-width: 1180px) {
+  .nav__n { display: none; }
+}
+.nav__menu a:not(.btn) { white-space: nowrap; }
 
 @media (max-width: 960px) {
   .hero__grid { grid-template-columns: 1fr; }
