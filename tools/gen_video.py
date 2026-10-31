@@ -101,10 +101,10 @@ VIDEOS = {
             },
             {
                 "t": (113, 129), "name": "Call to action",
-                "vo": (113, 125, "The consultation ends. The explanation still has to work. Book a 30-minute call with a learning designer about one instruction patients keep getting wrong."),
+                "vo": (113, 125, "The consultation ends. The explanation still has to work. Bring one hard-to-use instruction to a 30-minute call with a learning designer. No deck required."),
                 "sfx": [(125, 129, "CTA holds for 1s; then F logo and flearning wordmark animate over 3s.")],
                 "shots": [("113–120s", "Return to the clinic and kitchen-table illustrations, joined by the orange information line. On-screen: [[DESIGN FOR THE SECOND MOMENT.]]"),
-                          ("120–126s", "CTA [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[ONE INSTRUCTION PATIENTS KEEP GETTING WRONG]] / [[NO DECK REQUIRED]]."),
+                          ("120–126s", "CTA [[BRING ONE HARD-TO-USE INSTRUCTION]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]."),
                           ("126–129s", "Animated F then flearning wordmark.")],
             },
         ],
@@ -125,7 +125,7 @@ VIDEOS["video-02"] = {
     "lens": "Project Lead lens",
     "runtime": 132,
     "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
-    "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
+    "stats": [("216", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
     "mood": "Light and practical, with a touch of dry humour, like a colleague spotting a pattern at their desk. Quick contrasts, steady pacing, a clear answer at the end.",
     "theme": "An answer can exist in the materials without reaching every patient in a useful form.",
     "concept": "<mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.",
@@ -193,9 +193,9 @@ VIDEOS["video-02"] = {
         },
         {
             "t": (119, 132), "name": "Call to action",
-            "vo": (119, 129, "Which instruction do patients keep getting wrong? Bring it to a 30-minute call with a learning designer. No deck required."),
+            "vo": (119, 129, "Which patient question keeps coming back? Bring it to a 30-minute call with a learning designer. No deck required."),
             "sfx": [(129, 132, "F draws first; ‘flearning’ wordmark resolves.")],
-            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[WHICH INSTRUCTION DO PATIENTS KEEP GETTING WRONG?]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
+            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[WHICH PATIENT QUESTION KEEPS COMING BACK?]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
         },
     ],
     "why": [
