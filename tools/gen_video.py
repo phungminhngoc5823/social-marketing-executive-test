@@ -101,17 +101,17 @@ VIDEOS = {
             },
             {
                 "t": (113, 129), "name": "Call to action",
-                "vo": (113, 125, "The consultation ends. The explanation still has to work. Bring one difficult instruction to a 30-minute call with a learning designer. No deck required."),
+                "vo": (113, 125, "The consultation ends. The explanation still has to work. Book a 30-minute call with a learning designer about one instruction patients keep getting wrong."),
                 "sfx": [(125, 129, "CTA holds for 1s; then F logo and flearning wordmark animate over 3s.")],
                 "shots": [("113–120s", "Return to the clinic and kitchen-table illustrations, joined by the orange information line. On-screen: [[DESIGN FOR THE SECOND MOMENT.]]"),
-                          ("120–126s", "CTA [[BRING ONE INSTRUCTION]] / [[30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]."),
+                          ("120–126s", "CTA [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[ONE INSTRUCTION PATIENTS KEEP GETTING WRONG]] / [[NO DECK REQUIRED]]."),
                           ("126–129s", "Animated F then flearning wordmark.")],
             },
         ],
         "why": [
             ("Narrative choice", "The visual mystery begins with a complete page at the kitchen table, rewinds to a clear consultation, and returns to the same facts presented for use. The payoff is communication design, not distribution or a saved clinical outcome."),
-            ("Landing-page evidence", "Direct source fit: “The written version is complete”; the same preparation information in the order written versus the order used; explanation of what and why; a leaflet is enough for a simple one-off. “This work earns its cost when…” under multi-step, days-later, home-alone conditions."),
-            ("Selection / exclusion", "Keep only one patient journey, one editorial written-versus-used comparison, and a short buyer cost-fit insight. No QR/portal/visual-guide delivery story, fabricated clinical actions or outcome promises. Two source-equivalent layouts preserve medical facts."),
+            ("Raw Content Source Proof", "Direct source fit: “The written version is complete”; the same preparation information in the order written versus the order used; explanation of what and why; a leaflet is enough for a simple one-off. “This work earns its cost when…” under multi-step, days-later, home-alone conditions."),
+            ("Selection / exclusion", "Keep only one patient journey, one editorial written-versus-used comparison, and a short buyer cost-fit insight."),
         ],
     },
 }
@@ -126,7 +126,7 @@ VIDEOS["video-02"] = {
     "runtime": 132,
     "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
     "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
-    "mood": "Dry editorial wit, short contrasts, and purposeful restraint. The repeated answer card brings a question into focus; no blame.",
+    "mood": "Dry editorial wit, short contrasts, and purposeful restraint. The repeated answer card brings a question into focus.",
     "theme": "An answer can exist in the materials without reaching every patient in a useful form.",
     "concept": "<mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.",
     "question": "How can F.Learning adapt one clinical explanation to different patient needs while keeping clinical accuracy under our team’s review?",
@@ -193,15 +193,15 @@ VIDEOS["video-02"] = {
         },
         {
             "t": (119, 132), "name": "Call to action",
-            "vo": (119, 129, "Which question does your team keep answering? Bring it to a 30-minute call with a learning designer. No deck required."),
+            "vo": (119, 129, "Which instruction do patients keep getting wrong? Bring it to a 30-minute call with a learning designer. No deck required."),
             "sfx": [(129, 132, "F draws first; ‘flearning’ wordmark resolves.")],
-            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[BRING THE QUESTION YOUR TEAM KEEPS ANSWERING]] / [[30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
+            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[WHICH INSTRUCTION DO PATIENTS KEEP GETTING WRONG?]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
         },
     ],
     "why": [
         ("Narrative choice", "A recurring answer card slides into the stack three times. Each return adds an orange tally beside the same question. The Project Lead changes the task: examine whom the explanation reaches, then build an audience-led brief. At CTA the question is circled instead of being presented as solved."),
-        ("Landing-page proof", "Step 1 identifies confusion; later design choices reflect literacy, language, emotional context and use. AMD qualitatively reports less time spent re-explaining basics and more on care decisions. NYU shows visual and multilingual colonoscopy-preparation guidance. The source assigns medical accuracy to client clinicians and the “can a patient still follow it” review to F.Learning."),
-        ("Selection / exclusion", "One fictional repeated question, one audience-first diagnosis, adapted explanations from a single medical source, and separate AMD/NYU case evidence. Keep claims tied to source; exclude invented call counts, guaranteed outcomes, specific languages and fabricated case footage."),
+        ("Raw Content Source Proof", "Step 1 identifies confusion; later design choices reflect literacy, language, emotional context and use. AMD qualitatively reports less time spent re-explaining basics and more on care decisions. NYU shows visual and multilingual colonoscopy-preparation guidance. The source assigns medical accuracy to client clinicians and the “can a patient still follow it” review to F.Learning."),
+        ("Selection / exclusion", "The story uses one familiar, fictional question that keeps coming back. It first asks which patients are getting stuck, then shows one clinical source adapted to their different needs, and backs this up with two real cases from the page: AMD and NYU Langone Health."),
     ],
 }
 

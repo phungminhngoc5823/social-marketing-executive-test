@@ -1798,7 +1798,8 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .closing__sources li span { font-size: 12px; color: var(--slate-500); }
 .closing__sources a { color: var(--white); text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.25); align-self: flex-start; transition: border-color 0.2s ease, color 0.2s ease; }
 .closing__sources a:hover { color: var(--orange-500); border-color: var(--orange-500); }
-.closing__foot { position: relative; margin-top: clamp(48px, 6vw, 72px); padding-top: 20px; padding-bottom: 28px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 13px; color: var(--slate-500); }
+.closing__foot { position: relative; margin-top: clamp(48px, 6vw, 72px); padding-bottom: 28px; font-size: 13px; color: var(--slate-500); }
+.closing__foot p { padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
 /* =========================================================
    Reveal-on-load / on-scroll utility
@@ -1935,6 +1936,10 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .sheader { grid-template-columns: 1fr; }
 }
 
+@media (min-width: 1081px) {
+  .steps { grid-template-rows: auto auto auto; }
+  .steps__item { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 6px; }
+}
 /* ---- Rationale / Process / Closing responsive ---- */
 @media (max-width: 1080px) {
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
