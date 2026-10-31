@@ -25,7 +25,9 @@ def fmt(t):
 def rich(text):
     """Escape, then turn [[ON-SCREEN TEXT]] into styled on-screen chips."""
     out = html.escape(text, quote=False)
-    out = re.sub(r"\[\[(.+?)\]\]", r'<span class="ost">\1</span>', out)
+    # Short chips never break; long ones may wrap across lines.
+    out = re.sub(r"\[\[(.+?)\]\]",
+                 lambda m: f'<span class="ost{" ost--nw" if len(m.group(1)) <= 30 else ""}">{m.group(1)}</span>', out)
     return out
 
 
@@ -115,6 +117,95 @@ VIDEOS = {
 }
 
 
+VIDEOS["video-02"] = {
+    "v": "v2",
+    "num": "03",
+    "label": "Video 02",
+    "title": "The Question That Keeps Coming Back",
+    "lens": "Project Lead lens",
+    "runtime": 132,
+    "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
+    "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
+    "mood": "Dry editorial wit, short contrasts, and purposeful restraint. The repeated answer card brings a question into focus; no blame.",
+    "theme": "An answer can exist in the materials without reaching every patient in a useful form.",
+    "concept": "<mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.",
+    "question": "How can F.Learning adapt one clinical explanation to different patient needs while keeping clinical accuracy under our team’s review?",
+    "visual_sys": ["Same cream / black / orange system", "Series label", "Paper cards", "Orange question & tally",
+                   "Yellow brief", "Simple Project Lead figure", "Mostly progressive reveals", "One question-to-magnifier morph"],
+    "audio_sys": ["Calm VO ~115–125 wpm", "Music", "Paper & pencil SFX", "Silent beats marked in the audio column",
+                  "Ends on a 3s logo"],
+    "swatches": [("#FBF3E4", "Cream"), ("#0F172A", "Outline"), ("#FF9333", "Orange"), ("#FFD45C", "Yellow brief")],
+    "rows": [
+        {
+            "t": (0, 12), "name": "Same question, again",
+            "pre": [(0, 6, "Three paper slides, three pencil tally strokes.")],
+            "vo": (6, 12, "Same answer. Same question. Again. Why does it keep coming back?"),
+            "under": "Final light paper tap.",
+            "sfx": [],
+            "shots": [("0–3s", "Show the series label [[PATIENT EDUCATION]], the recurring answer card and the headline [[THE SAME QUESTION. AGAIN.]] immediately, before VO begins."),
+                      ("3–12s", "The same answer card is filed repeatedly on the Project Lead’s desk; orange tally marks accumulate beside the still-open question. The orange question mark carries into the next scene.")],
+        },
+        {
+            "t": (12, 27), "name": "A better question",
+            "vo": (12, 26, "The answer is in the materials. Clinicians have explained it. More pages may not help. So the Project Lead asks a better question: who is this explanation reaching?"),
+            "sfx": [(26, 27, "Magnifier line completes.")],
+            "shots": [("12–20s", "Project Lead places the recurring question next to the complete source material."),
+                      ("20–27s", "The orange question mark becomes a magnifying glass, drawing attention to three patient silhouettes. On-screen: [[WHO IS THIS REACHING?]] The magnifier carries into the next beat.")],
+        },
+        {
+            "t": (27, 43), "name": "Where people get stuck",
+            "vo": (27, 41, "Some patients need clearer words. Others need to see what is happening, not just read it. Some can’t rely on written English. Where, exactly, are people getting stuck?"),
+            "sfx": [(41, 43, "Last observation lands on yellow note.")],
+            "shots": [("27–35s", "Beneath the magnifier, introduce [[WORDING]] (dense phrase) and [[WHAT NEEDS SHOWING?]] (visual cue)."),
+                      ("35–43s", "Add [[LANGUAGE]] with narration waves; all three remain questions to investigate. Move the cards onto the yellow Project Lead note.")],
+        },
+        {
+            "t": (43, 60), "name": "The brief",
+            "vo": (43, 57, "At F.Learning, we begin with your patients. Not a production format. What must they understand? Where do they get stuck? And what could make them more anxious?"),
+            "sfx": [(57, 60, "Pencil connects three brief questions, then holds.")],
+            "shots": [("43–51s", "The note becomes a [[COMMUNICATION BRIEF]] as F.Learning joins the process."),
+                      ("51–60s", "Reveal [[WHAT MUST THEY UNDERSTAND?]], [[WHERE DO THEY GET STUCK?]], [[WHAT ADDS ANXIETY?]] and connect them to the audience cards. Hold the completed brief for the music/SFX-only moment.")],
+        },
+        {
+            "t": (60, 78), "name": "One core, different needs",
+            "vo": (60, 75, "Start with one clinical source. Keep the facts. Adapt the explanation for each audience: what they need to see, how much detail, and which language. Different versions. Same core."),
+            "sfx": [(75, 78, "Final aligned source dots reveal and hold.")],
+            "shots": [("60–68s", "Present one [[CLINICAL SOURCE]] card with fixed information points."),
+                      ("68–78s", "Build possible audience-specific explanations underneath – visual sequence, simpler wording, narrated version – each connected to the unchanged source by orange lines. On-screen: [[ONE CORE. DIFFERENT NEEDS.]] Hold the completed comparison.")],
+        },
+        {
+            "t": (78, 92), "name": "Proof: AMD",
+            "vo": (78, 91, "For the Association of Migraine Disorders, a menstrual-migraine explainer helped patients understand their pattern. Clinicians spent less time re-explaining basics and more on care decisions."),
+            "sfx": [(91, 92, "Proof card holds; soft paper placement.")],
+            "shots": [(None, "An AMD proof card appears: [[ASSOCIATION OF MIGRAINE DISORDERS – Menstrual migraine]], with a simple calendar illustration. Reveal the two supported takeaways in sequence: [[LESS RE-EXPLAINING BASICS]] and [[MORE ON CARE DECISIONS.]] The case stays clearly identified.")],
+        },
+        {
+            "t": (92, 106), "name": "Proof: NYU Langone",
+            "vo": (92, 104, "For NYU Langone Health, multilingual colonoscopy-preparation videos made the steps easier to understand. Visual guidance and narration helped patients who couldn’t rely on written English."),
+            "sfx": [(104, 106, "Second proof card settles beside AMD.")],
+            "shots": [(None, "A separate NYU Langone Health proof card joins AMD. It shows a colonoscopy-preparation sequence, visual cues and multilingual narration waves. On-screen: [[MULTILINGUAL VISUAL GUIDANCE.]] Keep both case cards visible as distinct examples.")],
+        },
+        {
+            "t": (106, 119), "name": "Two reviews",
+            "vo": (106, 118, "Your clinical team reviews medical accuracy. We review whether a patient can still follow it. Two separate reviews. One explanation your team can check."),
+            "sfx": [(118, 119, "Two review annotations sit in place.")],
+            "shots": [(None, "The proof cards give way to script and storyboard sheets. Two reviewer annotations appear: [[MEDICAL ACCURACY – CLIENT CLINICAL TEAM]] and [[CAN A PATIENT STILL FOLLOW IT? – F.LEARNING]]. Beneath them, a simple process line reads [[BRIEF → SCRIPT → STORYBOARD → ANIMATION]].")],
+        },
+        {
+            "t": (119, 132), "name": "Call to action",
+            "vo": (119, 129, "Which question does your team keep answering? Bring it to a 30-minute call with a learning designer. No deck required."),
+            "sfx": [(129, 132, "F draws first; ‘flearning’ wordmark resolves.")],
+            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[BRING THE QUESTION YOUR TEAM KEEPS ANSWERING]] / [[30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
+        },
+    ],
+    "why": [
+        ("Narrative choice", "A recurring answer card slides into the stack three times. Each return adds an orange tally beside the same question. The Project Lead changes the task: examine whom the explanation reaches, then build an audience-led brief. At CTA the question is circled instead of being presented as solved."),
+        ("Landing-page proof", "Step 1 identifies confusion; later design choices reflect literacy, language, emotional context and use. AMD qualitatively reports less time spent re-explaining basics and more on care decisions. NYU shows visual and multilingual colonoscopy-preparation guidance. The source assigns medical accuracy to client clinicians and the “can a patient still follow it” review to F.Learning."),
+        ("Selection / exclusion", "One fictional repeated question, one audience-first diagnosis, adapted explanations from a single medical source, and separate AMD/NYU case evidence. Keep claims tied to source; exclude invented call counts, guaranteed outcomes, specific languages and fabricated case footage."),
+    ],
+}
+
+
 def arc(vid, d):
     total = d["runtime"]
     segs = []
@@ -144,6 +235,12 @@ def row(vid, i, r):
                     <p class="sfx__tag">{ICON_WAVE}Music + SFX only · {fmt(sa)}–{fmt(sb)}s</p>
                     <p class="sfx__txt">{html.escape(t)}</p>
                   </div>''' for sa, sb, t in r["sfx"])
+    pre = "".join(
+        f'''
+                  <div class="sfx sfx--pre">
+                    <p class="sfx__tag">{ICON_WAVE}Music + SFX only · {fmt(sa)}–{fmt(sb)}s</p>
+                    <p class="sfx__txt">{html.escape(t)}</p>
+                  </div>''' for sa, sb, t in r.get("pre", []))
     if r.get("under"):
         sfx += f'''
                   <div class="sfx sfx--under">
@@ -162,7 +259,7 @@ def row(vid, i, r):
                 <span class="srow__name">{html.escape(r["name"])}</span>
               </div>
               <div class="srow__cell srow__audio">
-                <p class="srow__mlabel">{ICON_MIC}Narration / Audio</p>
+                <p class="srow__mlabel">{ICON_MIC}Narration / Audio</p>{pre}
                 <p class="vo__tag">VO · {fmt(vo_a)}–{fmt(vo_b)}s</p>
                 <blockquote class="vo">“{html.escape(vo)}”</blockquote>{sfx}
               </div>
@@ -283,9 +380,10 @@ def main():
         b = s.index(end) + len(end)
         s = s[:a] + block + s[b:]
     else:
-        ph = "    <!-- Sections 02–05 are added one by one after review. -->"
-        assert ph in s, "placeholder not found"
-        s = s.replace(ph, block + "\n" + ph.replace("02–05", "03–05"))
+        m = re.search(r"    <!-- Sections (\d\d)–05 are added one by one after review\. -->", s)
+        assert m, "placeholder not found"
+        nxt = f"{int(m.group(1)) + 1:02d}"
+        s = s.replace(m.group(0), block + "\n" + m.group(0).replace(m.group(1) + "–05", nxt + "–05"))
     open(path, "w", encoding="utf-8").write(s)
     print("ok", vid)
 

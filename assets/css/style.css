@@ -32,10 +32,12 @@
   --v1-ink: #B84E05;
   --v1-50: #FFF6EE;
   --v1-200: #FDE6D2;
+  --v1-on-dark: #FF9333;
   --v2: #1F5F99;
   --v2-ink: #003F71;
   --v2-50: #EEF4FA;
   --v2-200: #CFE0F0;
+  --v2-on-dark: #8DBBE8;
 
   /* Type */
   --font-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -1146,13 +1148,14 @@ p, li, dd, blockquote { text-wrap: pretty; }
   --acc-ink: var(--v1-ink);
   --acc-50: var(--v1-50);
   --acc-200: var(--v1-200);
+  --acc-on-dark: var(--v1-on-dark);
   position: relative;
   background: linear-gradient(var(--acc-50), var(--white) 520px);
   border-top: 1px solid var(--acc-200);
 }
-.section--v2 { --acc: var(--v2); --acc-ink: var(--v2-ink); --acc-50: var(--v2-50); --acc-200: var(--v2-200); }
+.section--v2 { --acc: var(--v2); --acc-ink: var(--v2-ink); --acc-50: var(--v2-50); --acc-200: var(--v2-200); --acc-on-dark: var(--v2-on-dark); }
 .section--video .section__kicker { color: var(--acc-ink); }
-.section--video .section__num { color: var(--acc); }
+.section--video .section__num { color: var(--acc-on-dark); }
 .section--video .block__tag { background: var(--acc-50); border-color: var(--acc-200); color: var(--acc-ink); }
 
 .vmeta { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -1199,7 +1202,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
   border-color: var(--slate-900);
   box-shadow: var(--shadow-md);
 }
-.sheader__card--concept .sheader__label { color: var(--acc); }
+.sheader__card--concept .sheader__label { color: var(--acc-on-dark); }
 .sheader__concept {
   font-size: clamp(20px, 2.2vw, 28px);
   font-weight: 700;
@@ -1209,8 +1212,8 @@ p, li, dd, blockquote { text-wrap: pretty; }
 }
 .sheader__concept mark {
   background: none;
-  color: var(--acc);
-  box-shadow: inset 0 -0.14em 0 var(--acc);
+  color: var(--acc-on-dark);
+  box-shadow: inset 0 -0.14em 0 var(--acc-on-dark);
 }
 .sheader__card--question blockquote {
   margin: 0;
@@ -1425,6 +1428,8 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .sfx__tag svg { color: var(--slate-500); }
 .sfx__txt { margin-top: 2px; font-size: 13.5px; font-style: italic; color: var(--slate-600); }
 .sfx--under { border-style: solid; border-color: var(--slate-200); }
+.sfx--pre { margin: 6px 0 14px; }
+.ost--nw { white-space: nowrap; }
 
 .shots { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .shots li { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 10px; font-size: 14.5px; line-height: 1.6; color: var(--slate-700); }
@@ -1451,7 +1456,6 @@ p, li, dd, blockquote { text-wrap: pretty; }
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.3px;
-  white-space: nowrap;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
