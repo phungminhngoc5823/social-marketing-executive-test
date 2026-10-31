@@ -41,7 +41,7 @@ VIDEOS = {
         "runtime": 129,
         "meta": ["LinkedIn 4:5 (assumed)", "~129s", "VO 115–125 wpm + silent visual beats"],
         "stats": [("212", "VO words"), ("118", "wpm average"), ("21s", "music + SFX only"), ("8", "beats")],
-        "mood": "Quiet, calm and reassuring, like an ordinary evening at home. Slow pacing, soft music, paper and pencil sounds. A small moment of confusion, never a medical drama.",
+        "mood": "Quiet, calm and reassuring, like an ordinary evening at home. Slow pacing, soft music, paper and pencil sounds. A small moment of confusion, not a dramatic medical story.",
         "theme": "Correct, complete information in the room may be difficult to use alone at home.",
         "concept": "A complete written instruction needs an explanation designed for <mark>the second moment</mark>: when a patient must use it.",
         "question": "Which multi-step home instructions need explanations designed for the moment of use, beyond complete written instructions?",
@@ -109,7 +109,7 @@ VIDEOS = {
             },
         ],
         "why": [
-            ('Narrative choice', 'Start at the kitchen table, rewind to the consultation, then show the same facts rebuilt in the order they are used. The payoff is a clearer explanation, not a promised clinical outcome.'),
+            ('Narrative choice', 'Start at the kitchen table, rewind to the consultation, then show the same facts rebuilt in the order they are used. The payoff is a clearer explanation.'),
             ('Raw Content Source Proof', '“The written version is complete”, the order written vs the order used, explaining what and why, and the honest cost line: a leaflet for simple instructions, this work for several steps at home.'),
             ('Selection', 'One patient journey, one written-vs-used comparison and one cost-fit message. Nothing more, so the story stays easy to follow.'),
         ],
