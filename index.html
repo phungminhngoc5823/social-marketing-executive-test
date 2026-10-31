@@ -29,11 +29,11 @@
       </a>
 
       <nav class="nav__menu" id="nav-menu" aria-label="Sections">
-        <a href="#overview">Overview</a>
-        <a href="#video-01">Video 01</a>
-        <a href="#video-02">Video 02</a>
-        <a href="#rationale">Rationale</a>
-        <a href="#process">Process &amp; AI</a>
+        <a href="#overview"><span class="nav__n">01</span>Overview</a>
+        <a href="#video-01"><span class="nav__n">02</span>Video 01</a>
+        <a href="#video-02"><span class="nav__n">03</span>Video 02</a>
+        <a href="#rationale"><span class="nav__n">04</span>Rationale</a>
+        <a href="#process"><span class="nav__n">05</span>Process &amp; AI</a>
         <a class="btn btn--primary btn--sm nav__cta-mobile" href="https://phungminhngoc5823.github.io/my-portfolio/" target="_blank" rel="noopener">Portfolio</a>
       </nav>
 
@@ -89,10 +89,10 @@
         <!-- Visual: two stories → two buyers → one focus -->
         <div class="hero__visual" aria-label="Diagram: Video 01 for the executive and Video 02 for the project lead both lead to one patient education focus.">
           <div class="story-cards">
-            <article class="story-card story-card--a" data-hero-card>
+            <article class="story-card story-card--a story-card--v1" data-hero-card>
               <header class="story-card__top">
                 <span class="story-card__num">01</span>
-                <span class="pill pill--soft">Executive lens</span>
+                <span class="pill pill--v1">Executive lens</span>
               </header>
               <div class="story-card__art">
                 <!-- Kitchen table, 8 PM, a complete sheet, one open question -->
@@ -109,7 +109,7 @@
                   </g>
                   <text x="160" y="80" text-anchor="middle" class="art-label">8 PM</text>
                   <g class="art-q">
-                    <circle cx="124" cy="40" r="13" fill="#FF9333"/>
+                    <circle cx="124" cy="40" r="13" style="fill:var(--v1)"/>
                     <path d="M120 36.5a4 4 0 1 1 5.5 3.7c-1.2.5-1.5 1.3-1.5 2.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
                     <circle cx="124" cy="46.5" r="1.4" fill="#fff"/>
                   </g>
@@ -122,10 +122,10 @@
               </footer>
             </article>
 
-            <article class="story-card story-card--b" data-hero-card>
+            <article class="story-card story-card--b story-card--v2" data-hero-card>
               <header class="story-card__top">
                 <span class="story-card__num">02</span>
-                <span class="pill pill--soft">Project Lead lens</span>
+                <span class="pill pill--v2">Project Lead lens</span>
               </header>
               <div class="story-card__art">
                 <!-- The same answer card, again; tally marks; magnifier -->
@@ -138,12 +138,12 @@
                       <path d="M58 60h40M58 70h56M58 80h46" stroke="#CBD5E1"/>
                     </g>
                   </g>
-                  <g class="art-tally" stroke="#FF9333" stroke-width="3" stroke-linecap="round">
+                  <g class="art-tally" stroke-width="3" stroke-linecap="round" style="stroke:var(--v2)">
                     <path d="M140 40v24"/><path d="M149 40v24"/><path d="M158 40v24"/>
                   </g>
                   <g class="art-q" fill="none" stroke="#0F172A" stroke-width="2.4" stroke-linecap="round">
-                    <circle cx="156" cy="100" r="16" fill="#FFF6EE" stroke="#FF9333"/>
-                    <path d="M168 112l14 14" stroke="#FF9333" stroke-width="4"/>
+                    <circle cx="156" cy="100" r="16" style="fill:var(--v2-50);stroke:var(--v2)"/>
+                    <path d="M168 112l14 14" stroke-width="4" style="stroke:var(--v2)"/>
                     <path d="M152 96.5a4 4 0 1 1 5.5 3.7c-1.2.5-1.5 1.3-1.5 2.6" stroke="#0F172A" stroke-width="2"/>
                     <circle cx="156" cy="106.5" r="1.2" fill="#0F172A" stroke="none"/>
                   </g>
@@ -195,338 +195,280 @@
       </div>
     </section>
 
-    <!-- ============ BODY: sticky overview + content ============ -->
-    <div class="layout container">
-      <aside class="sidebar" aria-label="Submission overview">
-        <div class="sidebar__inner">
-          <p class="sidebar__title">Submission Overview</p>
-          <ol class="sidebar__list">
-            <li>
-              <a class="sidebar__link" href="#overview">
-                <span class="sidebar__num">01</span>
-                <span class="sidebar__text"><strong>Overview</strong><small>The brief, answered</small></span>
-              </a>
-            </li>
-            <li>
-              <a class="sidebar__link" href="#video-01">
-                <span class="sidebar__num">02</span>
-                <span class="sidebar__text"><strong>Video 01</strong><small>The Second Moment</small></span>
-              </a>
-            </li>
-            <li>
-              <a class="sidebar__link" href="#video-02">
-                <span class="sidebar__num">03</span>
-                <span class="sidebar__text"><strong>Video 02</strong><small>The Question That Keeps Coming Back</small></span>
-              </a>
-            </li>
-            <li>
-              <a class="sidebar__link" href="#rationale">
-                <span class="sidebar__num">04</span>
-                <span class="sidebar__text"><strong>Content Rationale</strong><small>What I kept, and why</small></span>
-              </a>
-            </li>
-            <li>
-              <a class="sidebar__link" href="#process">
-                <span class="sidebar__num">05</span>
-                <span class="sidebar__text"><strong>Process &amp; AI</strong><small>How I got here</small></span>
-              </a>
-            </li>
-          </ol>
-          <div class="sidebar__divider" aria-hidden="true"></div>
-          <a class="btn btn--ghost btn--sm sidebar__cta" href="#top">
-            <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Back to top
-          </a>
-        </div>
-      </aside>
-
-      <div class="content">
-        <!-- ============ 01 · OVERVIEW ============ -->
-        <section class="section" id="overview" aria-labelledby="overview-title">
-          <header class="section__head reveal">
+    <!-- ============ 01 · OVERVIEW ============ -->
+    <section class="section section--overview" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <div class="section__head-main">
             <p class="section__kicker"><span class="section__num">01</span> Overview</p>
             <h2 class="section__title" id="overview-title">The brief, answered at a glance</h2>
-            <p class="section__lead">
-              Everything the brief asked for, where to find it, and the two decisions I made
-              where the brief left room to decide.
-            </p>
-          </header>
+          </div>
+          <p class="section__lead">
+            What the brief asked for and where to find it, the two stories side by side,
+            and the two decisions I made where the brief left room to decide.
+          </p>
+        </header>
 
-          <!-- A · Brief → Delivered -->
-          <div class="block">
-            <h3 class="block__title reveal">
-              <span class="block__tag">A</span> The brief asked for… and what I delivered
-            </h3>
-
-            <div class="compliance reveal" role="table" aria-label="Brief requirements and how they were delivered">
-              <div class="compliance__head" role="row">
-                <span role="columnheader">The brief asked for</span>
-                <span role="columnheader" class="compliance__brand">What I delivered</span>
-              </div>
-
-              <div class="compliance__group" role="rowgroup">
-                <p class="compliance__group-label">Context</p>
-
-                <div class="compliance__row" role="row" style="--i:0">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Source</span>
-                    Only the Patient Education landing page. Nothing from the homepage or other pages.
+        <!-- A · Brief → delivered -->
+        <div class="block">
+          <h3 class="block__title reveal"><span class="block__tag">A</span> The brief, delivered</h3>
+          <div class="checks">
+              <div class="checks__group reveal" style="--d:0">
+                <header class="checks__head">
+                  <span class="checks__icon" aria-hidden="true"><svg width="21" height="17" viewBox="0 0 21 17" fill="none"><path d="M6.9375 4.41026V2.13675C6.9375 1.50894 7.46916 1 8.125 1H12.2812C12.9371 1 13.4688 1.50894 13.4688 2.13675V4.41026M3.375 15.7778H17.625C18.9367 15.7778 20 14.7599 20 13.5043V6.68376C20 5.42814 18.9367 4.41026 17.625 4.41026H3.375C2.06332 4.41026 1 5.42814 1 6.68376V13.5043C1 14.7599 2.06332 15.7778 3.375 15.7778Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                  <div><p class="checks__title">The Context</p><p class="checks__sub">Source, audience, length, tone</p></div>
+                </header>
+                <ul class="checks__list">
+                <li class="check" style="--i:0">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Source</p>
+                    <p class="check__req">Only the Patient Education page. Nothing from the homepage or other pages.</p>
+                    <p class="check__did">Every point in both scripts comes from that one page and was checked against it. <a class="jump" href="#rationale">Rationale</a></p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>Every point in both scripts is taken from that one page and checked against it.
-                      <a class="jump" href="#rationale">See rationale</a></p>
+                </li>
+                <li class="check" style="--i:1">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Audience</p>
+                    <p class="check__req">High-intent healthcare executives and project leads, not patients.</p>
+                    <p class="check__did">One buyer lens per video: <strong class="c-v1">Executive</strong> in Video 01, <strong class="c-v2">Project Lead</strong> in Video 02.</p>
                   </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:1">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Audience</span>
-                    High-intent healthcare executives and project leads, not patients.
-                  </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>One buyer lens per video: <strong>Executive</strong> in Video 01, <strong>Project Lead</strong> in Video 02.
-                      <a class="jump" href="#at-a-glance">Compare</a></p>
-                  </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:2">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Length</span>
-                    90–150 seconds.
-                  </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <div class="compliance__did-body">
-                      <p><strong>~129s</strong> and <strong>~132s</strong>, timecoded at a calm 115–125 wpm voice-over with silent visual beats.</p>
-                      <div class="runtime" aria-hidden="true">
-                        <div class="runtime__track">
-                          <span class="runtime__range"></span>
-                          <span class="runtime__mark" style="--at:129"><i>01</i></span>
-                          <span class="runtime__mark runtime__mark--b" style="--at:132"><i>02</i></span>
-                        </div>
-                        <div class="runtime__scale"><span>0s</span><span>90s</span><span>150s</span><span>180s</span></div>
+                </li>
+                <li class="check" style="--i:2">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Length</p>
+                    <p class="check__req">90–150 seconds.</p>
+                    <p class="check__did">~129s and ~132s, timecoded at a calm 115–125 wpm voice-over with silent visual beats.</p>
+                    <div class="runtime" aria-hidden="true">
+                      <div class="runtime__track">
+                        <span class="runtime__range"></span>
+                        <span class="runtime__mark runtime__mark--a" style="--at:129"><i>01</i></span>
+                        <span class="runtime__mark runtime__mark--b" style="--at:132"><i>02</i></span>
                       </div>
+                      <div class="runtime__scale"><span>0s</span><span>90s</span><span>150s</span><span>180s</span></div>
                     </div>
+                    <p class="sr-only"></p>
                   </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:3">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Tone &amp; style</span>
-                    Narrative storytelling, not a list of dry features.
+                </li>
+                <li class="check" style="--i:3">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Tone &amp; style</p>
+                    <p class="check__req">Narrative storytelling, not dry features.</p>
+                    <p class="check__did">A kitchen-table mystery with a rewind (01). A question that keeps coming back and turns into a brief (02).</p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>Video 01 is a kitchen-table mystery with a rewind. In Video 02, a question that keeps coming back turns into a brief.</p>
-                  </div>
-                </div>
+                </li>
+                </ul>
               </div>
-
-              <div class="compliance__group" role="rowgroup">
-                <p class="compliance__group-label">What to submit</p>
-
-                <div class="compliance__row" role="row" style="--i:4">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Two script options</span>
-                    Two distinct creative and narrative directions.
+              <div class="checks__group reveal" style="--d:1">
+                <header class="checks__head">
+                  <span class="checks__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8.2 20.1999H3.39999C2.0745 20.1999 0.999991 19.1254 1 17.7999L1.00009 3.39999C1.0001 2.07451 2.07462 1 3.40009 1H14.2004C15.5258 1 16.6004 2.07452 16.6004 3.4V8.2M11.8002 16.891L16.8914 11.7999L20.2855 15.194L15.1943 20.2851H11.8002V16.891Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <div><p class="checks__title">The Task</p><p class="checks__sub">What I needed to deliver</p></div>
+                </header>
+                <ul class="checks__list">
+                <li class="check" style="--i:4">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Two script options</p>
+                    <p class="check__req">Two distinct creative and narrative directions.</p>
+                    <p class="check__did">A different buyer, buyer question, narrative device and proof in each. <a class="jump" href="#at-a-glance">Compare</a></p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>A different buyer, buyer question, narrative device and proof in each.
-                      <a class="jump" href="#video-01">Read Video 01</a> <a class="jump" href="#video-02">Read Video 02</a></p>
+                </li>
+                <li class="check" style="--i:5">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Content rationale</p>
+                    <p class="check__req">What I chose from the page, and why.</p>
+                    <p class="check__did">A point-by-point table of what I kept and why, plus a selection note for each video. <a class="jump" href="#rationale">Rationale</a></p>
                   </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:5">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Content rationale</span>
-                    What I chose from the page, and why those points over others.
+                </li>
+                <li class="check" style="--i:6">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Dual-column layout</p>
+                    <p class="check__req">Header (Mood, Theme, Core Concept) + Narration/Audio | Visual.</p>
+                    <p class="check__did">Both scripts use the same format: the required header, plus the buyer question, then a timecoded two-column table.</p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>A point-by-point table of what I kept and why, plus a selection note for each video.
-                      <a class="jump" href="#rationale">See rationale</a></p>
-                  </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:6">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Dual-column layout</span>
-                    A header with Mood, Theme and Core Concept; then Narration/Audio | Visual/On-screen Action.
-                  </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>Both scripts use the same format: the required header (plus the buyer question), then a timecoded two-column table.</p>
-                  </div>
-                </div>
+                </li>
+                </ul>
               </div>
-
-              <div class="compliance__group" role="rowgroup">
-                <p class="compliance__group-label">The rules</p>
-
-                <div class="compliance__row" role="row" style="--i:7">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">AI disclosure</span>
-                    AI is encouraged. Say how you used it.
+              <div class="checks__group reveal" style="--d:2">
+                <header class="checks__head">
+                  <span class="checks__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 10L10 14.5M10 6.66455V6.625M1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <div><p class="checks__title">The Rules</p><p class="checks__sub">How I worked</p></div>
+                </header>
+                <ul class="checks__list">
+                <li class="check" style="--i:7">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">AI disclosure</p>
+                    <p class="check__req">AI is encouraged. Say how you used it.</p>
+                    <p class="check__did">Claude and ChatGPT: what AI supported, and what I decided. <a class="jump" href="#process">Process</a></p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>Claude and ChatGPT: what AI supported, and what I decided.
-                      <a class="jump" href="#process">See process</a></p>
+                </li>
+                <li class="check" style="--i:8">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">Make decisions</p>
+                    <p class="check__req">If something is unclear, decide and state the assumption.</p>
+                    <p class="check__did">Two assumptions: who the buyer is, and where the video runs. <a class="jump" href="#assumptions">Assumptions</a></p>
                   </div>
-                </div>
-
-                <div class="compliance__row" role="row" style="--i:8">
-                  <div class="compliance__ask" role="cell">
-                    <span class="compliance__label">Make decisions</span>
-                    If something is unclear, decide, state the assumption, keep going.
+                </li>
+                <li class="check" style="--i:9">
+                  <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
+                  <div class="check__body">
+                    <p class="check__label">No clarifications</p>
+                    <p class="check__req">Do not email to ask. Figure it out.</p>
+                    <p class="check__did">Nothing was asked. Every open point was decided from the brief and the page alone.</p>
                   </div>
-                  <div class="compliance__did" role="cell">
-                    <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg></span>
-                    <p>Two assumptions, stated below: who the buyer is, and where the video runs.
-                      <a class="jump" href="#assumptions">See assumptions</a></p>
-                  </div>
-                </div>
+                </li>
+                </ul>
               </div>
-            </div>
           </div>
+        </div>
 
-          <!-- B · At a glance -->
-          <div class="block" id="at-a-glance">
-            <h3 class="block__title reveal">
-              <span class="block__tag">B</span> Two videos at a glance
-            </h3>
-            <p class="block__lead reveal">Same service, same page, two different buyers. <span class="only-desktop">Hover a column to follow one story.</span><span class="only-mobile">Switch tabs to compare.</span></p>
-
-            <div class="glance reveal" data-glance>
-              <div class="glance__tabs" role="tablist" aria-label="Choose a video">
-                <button type="button" role="tab" aria-selected="true" data-glance-tab="a">Video 01</button>
-                <button type="button" role="tab" aria-selected="false" data-glance-tab="b">Video 02</button>
-              </div>
-
-              <div class="glance__scroll">
-                <table class="glance__table">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="glance__feature"><span class="sr-only">Dimension</span></th>
-                      <th scope="col" class="glance__col" data-col="a">
-                        <span class="glance__vnum">01</span>
-                        <span class="glance__vname">The Second Moment</span>
-                        <span class="glance__vsub">Executive lens · ~129s</span>
-                      </th>
-                      <th scope="col" class="glance__col" data-col="b">
-                        <span class="glance__vnum">02</span>
-                        <span class="glance__vname">The Question That Keeps Coming Back</span>
-                        <span class="glance__vsub">Project Lead lens · ~132s</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row" class="glance__feature">Buyer lens</th>
-                      <td data-col="a"><strong>Executive-first:</strong> deciding where custom patient education earns its cost.</td>
-                      <td data-col="b"><strong>Project Lead-first:</strong> deciding whether F.Learning can adapt existing content and work with their clinical reviewers.</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="glance__feature">Buyer question</th>
-                      <td data-col="a"><q>Which multi-step home instructions need explanations designed for the moment of use, beyond complete written instructions?</q></td>
-                      <td data-col="b"><q>How can F.Learning adapt one clinical explanation to different patient needs while keeping clinical accuracy under our team's review?</q></td>
-                    </tr>
-                    <tr class="glance__row--key">
-                      <th scope="row" class="glance__feature">Core concept</th>
-                      <td data-col="a">A complete written instruction needs an explanation designed for <mark>the second moment</mark>: when a patient must use it.</td>
-                      <td data-col="b"><mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="glance__feature">Narrative device</th>
-                      <td data-col="a">
-                        <ol class="beats">
-                          <li>Cold open: kitchen table, Day 3, 8 p.m.</li>
-                          <li>Rewind to a clear consultation</li>
-                          <li>Same instruction, rebuilt in the order it is used</li>
-                        </ol>
-                      </td>
-                      <td data-col="b">
-                        <ol class="beats">
-                          <li>The same answer card keeps coming back</li>
-                          <li>The question mark becomes a magnifier, then a brief</li>
-                          <li>The question is circled in the CTA</li>
-                        </ol>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="glance__feature">Proof from the page</th>
-                      <td data-col="a">
-                        <ul class="chips">
-                          <li>Kitchen-table insight</li>
-                          <li>“The written version is complete”</li>
-                          <li>Order written vs order used</li>
-                          <li>A leaflet is enough for simple instructions</li>
-                        </ul>
-                      </td>
-                      <td data-col="b">
-                        <ul class="chips">
-                          <li>Audience-first method (Steps 1 &amp; 3)</li>
-                          <li>AMD result</li>
-                          <li>NYU Langone Health result</li>
-                          <li>Separate clinical &amp; clarity reviews</li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr class="glance__row--cta">
-                      <th scope="row" class="glance__feature"><span class="sr-only">Read</span></th>
-                      <td data-col="a"><a class="jump jump--strong" href="#video-01">Read script 01</a></td>
-                      <td data-col="b"><a class="jump jump--strong" href="#video-02">Read script 02</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+        <!-- B · Two videos, side by side -->
+        <div class="block" id="at-a-glance">
+          <h3 class="block__title reveal"><span class="block__tag">B</span> Two stories, side by side</h3>
+          <p class="block__lead reveal">Same service, same page. Two buyers, each with their own question.</p>
+          <div class="duo">
+              <article class="duo__card duo__card--v1 reveal" style="--d:0" data-side="left">
+                <header class="duo__head">
+                  <div class="duo__art">
+                    <svg viewBox="0 0 200 150" aria-hidden="true">
+                      <g fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 118h172"/><path d="M30 118v22M170 118v22"/>
+                        <rect x="62" y="38" width="62" height="78" rx="4" fill="#fff"/>
+                        <path d="M72 52h34M72 62h42M72 72h38M72 82h42M72 92h28" stroke="#CBD5E1"/>
+                        <circle cx="160" cy="44" r="18" fill="#fff"/><path d="M160 33v11l7 5"/>
+                      </g>
+                      <text x="160" y="80" text-anchor="middle" class="art-label">8 PM</text>
+                      <g class="art-q"><circle cx="124" cy="40" r="13" style="fill:var(--v1)"/><path d="M120 36.5a4 4 0 1 1 5.5 3.7c-1.2.5-1.5 1.3-1.5 2.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><circle cx="124" cy="46.5" r="1.4" fill="#fff"/></g>
+                    </svg>
+                  </div>
+                  <div class="duo__id">
+                    <span class="duo__num">01</span>
+                    <h4 class="duo__title">The Second Moment</h4>
+                    <p class="duo__meta"><span class="duo__lens">Executive lens</span><span class="duo__rt">~129s</span></p>
+                  </div>
+                </header>
+                <div class="duo__row">
+                  <p class="duo__label">Buyer lens</p>
+                  <p class="duo__text">Deciding where custom patient education earns its cost.</p>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Buyer question</p>
+                  <blockquote class="duo__quote">Which multi-step home instructions need explanations designed for the moment of use, beyond complete written instructions?</blockquote>
+                </div>
+                <div class="duo__row duo__row--concept">
+                  <p class="duo__label">Core concept</p>
+                  <p class="duo__concept">A complete written instruction needs an explanation designed for <mark>the second moment</mark>: when a patient must use it.</p>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Narrative device</p>
+                  <ol class="story"><li><span class="story__dot">1</span><span class="story__txt">Cold open: kitchen table, Day 3, 8 p.m.</span></li><li><span class="story__dot">2</span><span class="story__txt">Rewind to a clear consultation</span></li><li><span class="story__dot">3</span><span class="story__txt">Same instruction, rebuilt in the order it is used</span></li></ol>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Proof from the page</p>
+                  <ul class="chips"><li>Kitchen-table insight</li><li>“The written version is complete”</li><li>Order written vs order used</li><li>A leaflet is enough for simple instructions</li></ul>
+                </div>
+                <div class="duo__row duo__row--cta">
+                  <a class="btn duo__btn" href="#video-01">Read script 01
+                    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5L13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
+              <article class="duo__card duo__card--v2 reveal" style="--d:1" data-side="right">
+                <header class="duo__head">
+                  <div class="duo__art">
+                    <svg viewBox="0 0 200 150" aria-hidden="true">
+                      <g fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="40" y="58" width="76" height="52" rx="4" fill="#F8FAFC" transform="rotate(-6 78 84)"/>
+                        <rect x="44" y="52" width="76" height="52" rx="4" fill="#F1F5F9" transform="rotate(3 82 78)"/>
+                        <rect x="48" y="46" width="76" height="52" rx="4" fill="#fff"/>
+                        <path d="M58 60h40M58 70h56M58 80h46" stroke="#CBD5E1"/>
+                      </g>
+                      <g stroke-width="3" stroke-linecap="round" style="stroke:var(--v2)"><path d="M140 40v24"/><path d="M149 40v24"/><path d="M158 40v24"/></g>
+                      <g class="art-q" fill="none" stroke-linecap="round">
+                        <circle cx="156" cy="100" r="16" fill="#fff" stroke-width="2.4" style="stroke:var(--v2)"/>
+                        <path d="M168 112l14 14" stroke-width="4" style="stroke:var(--v2)"/>
+                        <path d="M152 96.5a4 4 0 1 1 5.5 3.7c-1.2.5-1.5 1.3-1.5 2.6" stroke="#0F172A" stroke-width="2"/>
+                        <circle cx="156" cy="106.5" r="1.2" fill="#0F172A"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="duo__id">
+                    <span class="duo__num">02</span>
+                    <h4 class="duo__title">The Question That Keeps Coming Back</h4>
+                    <p class="duo__meta"><span class="duo__lens">Project Lead lens</span><span class="duo__rt">~132s</span></p>
+                  </div>
+                </header>
+                <div class="duo__row">
+                  <p class="duo__label">Buyer lens</p>
+                  <p class="duo__text">Deciding whether F.Learning can adapt existing content and work with their clinical reviewers.</p>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Buyer question</p>
+                  <blockquote class="duo__quote">How can F.Learning adapt one clinical explanation to different patient needs while keeping clinical accuracy under our team's review?</blockquote>
+                </div>
+                <div class="duo__row duo__row--concept">
+                  <p class="duo__label">Core concept</p>
+                  <p class="duo__concept"><mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.</p>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Narrative device</p>
+                  <ol class="story"><li><span class="story__dot">1</span><span class="story__txt">The same answer card keeps coming back</span></li><li><span class="story__dot">2</span><span class="story__txt">The question mark becomes a magnifier, then a brief</span></li><li><span class="story__dot">3</span><span class="story__txt">The question is circled in the CTA</span></li></ol>
+                </div>
+                <div class="duo__row">
+                  <p class="duo__label">Proof from the page</p>
+                  <ul class="chips"><li>Audience-first method (Steps 1 &amp; 3)</li><li>AMD result</li><li>NYU Langone Health result</li><li>Separate clinical &amp; clarity reviews</li></ul>
+                </div>
+                <div class="duo__row duo__row--cta">
+                  <a class="btn duo__btn" href="#video-02">Read script 02
+                    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5L13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
           </div>
+        </div>
 
-          <!-- C · Assumptions -->
-          <div class="block" id="assumptions">
-            <h3 class="block__title reveal">
-              <span class="block__tag">C</span> Assumptions I made
-            </h3>
-            <p class="block__lead reveal">The brief says: <em>“Make decisions. If something's unclear, decide what it means, state your assumption, and keep going.”</em> Here are mine.</p>
-
-            <div class="assume">
+        <!-- C · Assumptions -->
+        <div class="block" id="assumptions">
+          <h3 class="block__title reveal"><span class="block__tag">C</span> Assumptions I made</h3>
+          <p class="block__lead reveal">The brief says: <em>“Make decisions. If something's unclear, decide what it means, state your assumption, and keep going.”</em></p>
+          <div class="assume">
               <article class="assume__card reveal" style="--d:0">
                 <div class="assume__art" aria-hidden="true">
-                  <!-- Two buyers, one open budget question -->
                   <svg viewBox="0 0 240 120">
                     <g fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="70" cy="40" r="14" fill="#fff"/>
-                      <path d="M46 96c0-16 10-28 24-28s24 12 24 28" fill="#fff"/>
-                      <path d="M66 70l4 10 4-10" />
+                      <path d="M46 96c0-16 10-28 24-28s24 12 24 28" fill="#FFF6EE" style="stroke:var(--v1)"/>
+                      <path d="M66 70l4 10 4-10" style="stroke:var(--v1)"/>
                       <circle cx="170" cy="40" r="14" fill="#fff"/>
-                      <path d="M146 96c0-16 10-28 24-28s24 12 24 28" fill="#fff"/>
-                      <rect x="178" y="74" width="16" height="20" rx="2" fill="#FFF6EE" stroke="#FF9333"/>
+                      <path d="M146 96c0-16 10-28 24-28s24 12 24 28" fill="#EAF2F9" style="stroke:var(--v2)"/>
+                      <rect x="178" y="74" width="16" height="20" rx="2" fill="#fff" style="stroke:var(--v2)"/>
                     </g>
                     <text x="70" y="114" text-anchor="middle" class="assume__lbl">Executive</text>
                     <text x="170" y="114" text-anchor="middle" class="assume__lbl">Project Lead</text>
                     <g class="assume__q">
-                      <circle cx="120" cy="44" r="14" fill="#FF9333"/>
+                      <circle cx="120" cy="44" r="14" fill="#0F172A"/>
                       <path d="M115.5 40a4.5 4.5 0 1 1 6.2 4.2c-1.3.6-1.7 1.4-1.7 2.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
                       <circle cx="120" cy="51.5" r="1.5" fill="#fff"/>
                     </g>
-                    <path d="M88 44h14M138 44h14" stroke="#FF9333" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/>
+                    <path d="M88 44h14M138 44h14" stroke="#94A3B8" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round"/>
                   </svg>
                 </div>
                 <h4 class="assume__title">Audience</h4>
-                <dl class="assume__list">
-                  <div><dt>The brief says</dt><dd>B2B healthcare executives and project leads responsible for patient communication and clinical operations. High intent.</dd></div>
-                  <div><dt>It doesn't say</dt><dd>Who holds the budget, or whether they buy together or separately.</dd></div>
-                  <div class="assume__decision"><dt>So I decided</dt><dd>Each video leads with <strong>one buyer lens</strong>, instead of assuming two different buying processes.</dd></div>
-                </dl>
+                <ol class="flow">
+                  <li class="flow__step flow__step--says"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h5M8 12h5M8 15h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><p class="flow__label">The brief says</p><p>B2B healthcare executives and project leads responsible for patient communication and clinical operations. High intent.</p></div></li>
+                  <li class="flow__step flow__step--gap"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 3"/><path d="M7.6 7.6a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .8-1 1.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="14.3" r="1" fill="currentColor"/></svg></span><div><p class="flow__label">It doesn't say</p><p>Who holds the budget, or whether they buy together or separately.</p></div></li>
+                  <li class="flow__step flow__step--decided"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M6.2 10.4l2.6 2.6 5-5.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><p class="flow__label">So I decided</p><p>Each video leads with <strong>one buyer lens</strong>, instead of assuming two different buying processes.</p></div></li>
+                </ol>
               </article>
-
               <article class="assume__card reveal" style="--d:1">
                 <div class="assume__art" aria-hidden="true">
-                  <!-- LinkedIn-style 4:5 feed post, muted, captioned, 3s hook -->
                   <svg viewBox="0 0 240 120">
                     <g fill="none" stroke="#0F172A" stroke-width="2" stroke-linejoin="round">
                       <rect x="80" y="6" width="80" height="108" rx="10" fill="#fff"/>
@@ -536,10 +478,7 @@
                     <rect x="100" y="12" width="28" height="4" rx="2" fill="#CBD5E1"/>
                     <rect x="94" y="88" width="52" height="8" rx="2" fill="#0F172A"/>
                     <rect x="98" y="91" width="44" height="2" rx="1" fill="#fff"/>
-                    <g transform="translate(140 28)">
-                      <rect width="10" height="10" rx="2" fill="#0F172A"/>
-                      <path d="M2.5 4h2l2-2v6l-2-2h-2z" fill="#fff"/>
-                    </g>
+                    <g transform="translate(140 28)"><rect width="10" height="10" rx="2" fill="#0F172A"/><path d="M2.5 4h2l2-2v6l-2-2h-2z" fill="#fff"/></g>
                     <text x="120" y="60" text-anchor="middle" class="assume__ratio">4:5</text>
                     <g class="assume__hook">
                       <rect x="168" y="30" width="62" height="20" rx="10" fill="#0F172A"/>
@@ -554,19 +493,18 @@
                   </svg>
                 </div>
                 <h4 class="assume__title">Channel &amp; format</h4>
-                <dl class="assume__list">
-                  <div><dt>The brief says</dt><dd>A promotional video script, 90–150 seconds.</dd></div>
-                  <div><dt>It doesn't say</dt><dd>Where the video will run, or in what format.</dd></div>
-                  <div class="assume__decision"><dt>So I decided</dt><dd><strong>LinkedIn feed, 4:5</strong>, autoplay with sound off and captions. Hooks appear as on-screen text in the first 3 seconds. The visual style follows F.Learning's published social videos.</dd></div>
-                </dl>
+                <ol class="flow">
+                  <li class="flow__step flow__step--says"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h7l3 3v12H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h5M8 12h5M8 15h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><p class="flow__label">The brief says</p><p>A promotional video script, 90–150 seconds.</p></div></li>
+                  <li class="flow__step flow__step--gap"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 3"/><path d="M7.6 7.6a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .8-1 1.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="14.3" r="1" fill="currentColor"/></svg></span><div><p class="flow__label">It doesn't say</p><p>Where the video will run, or in what format.</p></div></li>
+                  <li class="flow__step flow__step--decided"><span class="flow__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M6.2 10.4l2.6 2.6 5-5.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><p class="flow__label">So I decided</p><p><strong>LinkedIn feed, 4:5</strong>, autoplay with sound off and captions. Hooks appear as on-screen text in the first 3 seconds.</p></div></li>
+                </ol>
               </article>
-            </div>
           </div>
-        </section>
-
-        <!-- Sections 02–05 are added one by one after review. -->
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Sections 02–05 are added one by one after review. -->
   </main>
 
   <script src="assets/js/main.js" defer></script>
