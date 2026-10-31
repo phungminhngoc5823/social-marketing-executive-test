@@ -1312,7 +1312,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
 
 /* ---- C · Dual-column script ---- */
 .script {
-  --cols: 132px minmax(0, 1fr) minmax(0, 1.12fr);
+  --cols: minmax(0, 1fr) minmax(0, 1.12fr);
   margin-top: 18px;
   border-radius: var(--radius-md);
   border: 1px solid var(--slate-200);
@@ -1369,19 +1369,23 @@ p, li, dd, blockquote { text-wrap: pretty; }
   transition: background-color 0.3s ease;
 }
 .srow:last-child { border-bottom: 0; border-radius: 0 0 var(--radius-md) var(--radius-md); }
-.srow.is-current { background: linear-gradient(90deg, var(--acc-50), transparent 40%); }
+.srow.is-current { background: linear-gradient(90deg, var(--acc-50), transparent 30%); }
+/* Time + beat name run as a full-width band, so the body stays a true two-column table */
 .srow__time {
-  position: relative;
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 20px;
-  border-right: 1px solid var(--slate-100);
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: var(--slate-50);
+  border-bottom: 1px dashed var(--slate-200);
+  transition: background-color 0.3s ease;
 }
+.srow.is-current .srow__time { background: var(--acc-50); }
 .srow__n {
   display: grid;
   place-items: center;
-  width: 30px; height: 30px;
+  width: 28px; height: 28px;
   border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--acc-200);
@@ -1391,8 +1395,9 @@ p, li, dd, blockquote { text-wrap: pretty; }
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .srow.is-current .srow__n { background: var(--acc); border-color: var(--acc); color: var(--white); }
-.srow__tc { margin-top: 4px; font-size: 15px; font-weight: 800; color: var(--slate-900); font-variant-numeric: tabular-nums; }
-.srow__name { font-size: 13px; line-height: 1.35; color: var(--slate-500); }
+.srow__tc { font-size: 15px; font-weight: 800; color: var(--slate-900); font-variant-numeric: tabular-nums; }
+.srow__name { font-size: 14px; color: var(--slate-500); }
+.srow__name::before { content: "·"; margin-right: 10px; color: var(--slate-300); }
 
 .srow__cell { padding: 20px; min-width: 0; }
 .srow__cell + .srow__cell { border-left: 1px solid var(--slate-100); }
@@ -1890,7 +1895,6 @@ p, li, dd, blockquote { text-wrap: pretty; }
 
 /* ---- Video sections responsive ---- */
 @media (max-width: 1080px) {
-  .script { --cols: 112px minmax(0, 1fr) minmax(0, 1.1fr); }
 }
 @media (max-width: 900px) {
   .sheader { grid-template-columns: 1fr 1fr; }

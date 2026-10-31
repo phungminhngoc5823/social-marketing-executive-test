@@ -343,7 +343,6 @@ def section(vid, d):
           <div class="script" data-script>
             <div class="script__bar" aria-hidden="true">
               <div class="script__cols">
-                <span>Time</span>
                 <span>{ICON_MIC}Narration / Audio</span>
                 <span>{ICON_EYE}Visual / On-screen action</span>
               </div>
