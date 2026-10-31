@@ -1931,7 +1931,11 @@ p, li, dd, blockquote { text-wrap: pretty; }
 
 @media (min-width: 1081px) {
   .steps { grid-template-rows: auto auto auto; }
-  .steps__item { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 6px; }
+  .steps__item { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 6px; padding-right: 0; }
+  .steps__title { font-size: 15px; white-space: nowrap; }
+}
+@media (min-width: 1081px) and (max-width: 1240px) {
+  .steps__title { font-size: 14px; }
 }
 /* ---- Rationale / Process / Closing responsive ---- */
 @media (max-width: 1080px) {
