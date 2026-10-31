@@ -51,21 +51,74 @@
     });
   }
 
-  /* ---------- Active section highlight in nav ---------- */
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__menu a[href^="#"]'));
-  var sections = links
-    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+  /* ---------- Active section highlight (top nav + sidebar) ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__menu a[href^="#"]'));
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.sidebar__link[href^="#"]'));
+  var sectionIds = sideLinks.map(function (a) { return a.getAttribute("href"); });
+  var sections = sectionIds
+    .map(function (id) { return document.querySelector(id); })
     .filter(Boolean);
+
+  function setActive(id) {
+    navLinks.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === id); });
+    var idx = sectionIds.indexOf(id);
+    sideLinks.forEach(function (a, i) {
+      a.classList.toggle("is-active", i === idx);
+      a.classList.toggle("is-done", idx > -1 && i < idx);
+      if (i === idx) {
+        a.setAttribute("aria-current", "true");
+        // Keep the active chip visible in the mobile horizontal stepper.
+        var list = a.closest(".sidebar__list");
+        if (list && list.scrollWidth > list.clientWidth) {
+          list.scrollTo({ left: a.parentNode.offsetLeft - 16, behavior: reduceMotion ? "auto" : "smooth" });
+        }
+      } else {
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
 
   if ("IntersectionObserver" in window && sections.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var id = "#" + entry.target.id;
-        links.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === id); });
+        if (entry.isIntersecting) setActive("#" + entry.target.id);
       });
-    }, { rootMargin: "-45% 0px -50% 0px" });
+    }, { rootMargin: "-35% 0px -60% 0px" });
     sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- At a glance: column highlight (desktop hover) / tabs (mobile) ---------- */
+  var glance = document.querySelector("[data-glance]");
+  if (glance) {
+    var cells = glance.querySelectorAll("[data-col]");
+    var tabs = glance.querySelectorAll("[data-glance-tab]");
+    var mobile = window.matchMedia("(max-width: 720px)");
+    var selected = "a";
+
+    function paint(col) {
+      cells.forEach(function (c) {
+        var on = col && c.getAttribute("data-col") === col;
+        c.classList.toggle("is-hl", !!on);
+        c.classList.toggle("is-dim", !!col && !on);
+      });
+    }
+    function selectTab(col) {
+      selected = col;
+      tabs.forEach(function (t) { t.setAttribute("aria-selected", String(t.getAttribute("data-glance-tab") === col)); });
+      if (mobile.matches) paint(col);
+    }
+    function sync() { paint(mobile.matches ? selected : null); }
+
+    tabs.forEach(function (t) {
+      t.addEventListener("click", function () { selectTab(t.getAttribute("data-glance-tab")); });
+    });
+    cells.forEach(function (c) {
+      c.addEventListener("mouseenter", function () { if (!mobile.matches) paint(c.getAttribute("data-col")); });
+    });
+    glance.addEventListener("mouseleave", function () { if (!mobile.matches) paint(null); });
+    if (mobile.addEventListener) mobile.addEventListener("change", sync);
+    else if (mobile.addListener) mobile.addListener(sync);
+    sync();
   }
 
   /* ---------- Reveal on scroll (outside the hero) ---------- */
