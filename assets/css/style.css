@@ -1817,36 +1817,6 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .checks--row.is-in .runtime__range { transform: scaleX(1); }
 .checks--row.is-in .runtime__mark { opacity: 1; transform: none; }
 
-/* "Next" link at the end of a section — keeps the page reading as one flow */
-.next {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: clamp(32px, 4vw, 44px);
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--slate-200);
-  background: var(--white);
-  color: var(--slate-900);
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-.next span {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  color: var(--slate-500);
-  padding-right: 12px;
-  border-right: 1px solid var(--slate-200);
-}
-.next svg { margin-left: auto; color: var(--orange-600); transition: transform 0.2s ease; }
-.next:hover { border-color: var(--orange-200); box-shadow: var(--shadow-sm); }
-.next:hover svg { transform: translateX(4px); }
-.section--video .next svg { color: var(--acc); }
-.section--video .next:hover { border-color: var(--acc-200); }
 
 /* =========================================================
    Reveal-on-load / on-scroll utility

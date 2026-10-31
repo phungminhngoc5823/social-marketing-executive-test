@@ -39,10 +39,9 @@ VIDEOS = {
         "title": "The Second Moment",
         "lens": "Executive lens",
         "runtime": 129,
-        "next": ("#video-02", "Video 02 · The Question That Keeps Coming Back"),
         "meta": ["LinkedIn 4:5 (assumed)", "~129s", "VO 115–125 wpm + silent visual beats"],
         "stats": [("212", "VO words"), ("118", "wpm average"), ("21s", "music + SFX only"), ("8", "beats")],
-        "mood": "Calm, candid, restrained. A small kitchen-table mystery becomes an information-design reveal, not a dramatic medical story.",
+        "mood": "Quiet, calm and reassuring, like an ordinary evening at home. Slow pacing, soft music, paper and pencil sounds. A small moment of confusion, never a medical drama.",
         "theme": "Correct, complete information in the room may be difficult to use alone at home.",
         "concept": "A complete written instruction needs an explanation designed for <mark>the second moment</mark>: when a patient must use it.",
         "question": "Which multi-step home instructions need explanations designed for the moment of use, beyond complete written instructions?",
@@ -110,9 +109,9 @@ VIDEOS = {
             },
         ],
         "why": [
-            ("Narrative choice", "The visual mystery begins with a complete page at the kitchen table, rewinds to a clear consultation, and returns to the same facts presented for use. The payoff is communication design, not distribution or a saved clinical outcome."),
-            ("Raw Content Source Proof", "Direct source fit: “The written version is complete”; the same preparation information in the order written versus the order used; explanation of what and why; a leaflet is enough for a simple one-off. “This work earns its cost when…” under multi-step, days-later, home-alone conditions."),
-            ("Selection / exclusion", "Keep only one patient journey, one editorial written-versus-used comparison, and a short buyer cost-fit insight."),
+            ('Narrative choice', 'Start at the kitchen table, rewind to the consultation, then show the same facts rebuilt in the order they are used. The payoff is a clearer explanation, not a promised clinical outcome.'),
+            ('Raw Content Source Proof', '“The written version is complete”, the order written vs the order used, explaining what and why, and the honest cost line: a leaflet for simple instructions, this work for several steps at home.'),
+            ('Selection', 'One patient journey, one written-vs-used comparison and one cost-fit message. Nothing more, so the story stays easy to follow.'),
         ],
     },
 }
@@ -125,10 +124,9 @@ VIDEOS["video-02"] = {
     "title": "The Question That Keeps Coming Back",
     "lens": "Project Lead lens",
     "runtime": 132,
-    "next": ("#rationale", "Content Rationale"),
     "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
     "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
-    "mood": "Dry editorial wit, short contrasts, and purposeful restraint. The repeated answer card brings a question into focus.",
+    "mood": "Light and practical, with a touch of dry humour, like a colleague spotting a pattern at their desk. Quick contrasts, steady pacing, a clear answer at the end.",
     "theme": "An answer can exist in the materials without reaching every patient in a useful form.",
     "concept": "<mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.",
     "question": "How can F.Learning adapt one clinical explanation to different patient needs while keeping clinical accuracy under our team’s review?",
@@ -201,10 +199,10 @@ VIDEOS["video-02"] = {
         },
     ],
     "why": [
-        ("Narrative choice", "A recurring answer card slides into the stack three times. Each return adds an orange tally beside the same question. The Project Lead changes the task: examine whom the explanation reaches, then build an audience-led brief. At CTA the question is circled instead of being presented as solved."),
-        ("Raw Content Source Proof", "Step 1 identifies confusion; later design choices reflect literacy, language, emotional context and use. AMD qualitatively reports less time spent re-explaining basics and more on care decisions. NYU shows visual and multilingual colonoscopy-preparation guidance. The source assigns medical accuracy to client clinicians and the “can a patient still follow it” review to F.Learning."),
-        ("Selection / exclusion", "The story uses one familiar, fictional question that keeps coming back. It first asks which patients are getting stuck, then shows one clinical source adapted to their different needs, and backs this up with two real cases from the raw content source: AMD and NYU Langone Health."),
-    ],
+            ('Narrative choice', 'The same question keeps coming back, so the Project Lead asks who the explanation is really reaching. That becomes a brief, and the CTA circles the question instead of claiming it is solved.'),
+            ('Raw Content Source Proof', 'Step 1 (find where confusion happens) and Step 3 (choose the format by literacy, language and context), the AMD and NYU Langone Health results, and the separate clinical and clarity reviews.'),
+            ('Selection', 'One familiar question, one patient-first diagnosis, one clinical source adapted for different needs, and two real cases to back it up.'),
+        ],
 }
 
 
@@ -366,7 +364,6 @@ def section(vid, d):
           <div class="why">{why}
           </div>
         </div>
-        <a class="next reveal" href="{d["next"][0]}"><span>Next</span>{html.escape(d["next"][1])}<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5L13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
     <!-- {vid.upper()}:END -->
