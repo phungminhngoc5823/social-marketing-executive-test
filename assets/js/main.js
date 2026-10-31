@@ -81,6 +81,27 @@
     }
   }
 
+  /* ---------- Script tables: current row + sticky progress ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-script]"), function (script) {
+    var rows = Array.prototype.slice.call(script.querySelectorAll(".srow"));
+    var segs = Array.prototype.slice.call(script.querySelectorAll(".sprog__seg"));
+    if (!rows.length || !("IntersectionObserver" in window)) return;
+
+    function mark(idx) {
+      rows.forEach(function (r, i) { r.classList.toggle("is-current", i === idx); });
+      segs.forEach(function (s, i) {
+        s.classList.toggle("is-active", i === idx);
+        s.classList.toggle("is-done", i < idx);
+      });
+    }
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) mark(parseInt(entry.target.getAttribute("data-row"), 10));
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    rows.forEach(function (r) { ro.observe(r); });
+  });
+
   /* ---------- Reveal on scroll (outside the hero) ---------- */
   var reveals = document.querySelectorAll(".reveal:not(.hero .reveal)");
   if ("IntersectionObserver" in window && !reduceMotion) {
