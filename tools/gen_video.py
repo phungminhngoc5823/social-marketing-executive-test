@@ -39,6 +39,7 @@ VIDEOS = {
         "title": "The Second Moment",
         "lens": "Executive lens",
         "runtime": 129,
+        "next": ("#video-02", "Video 02 · The Question That Keeps Coming Back"),
         "meta": ["LinkedIn 4:5 (assumed)", "~129s", "VO 115–125 wpm + silent visual beats"],
         "stats": [("212", "VO words"), ("118", "wpm average"), ("21s", "music + SFX only"), ("8", "beats")],
         "mood": "Calm, candid, restrained. A small kitchen-table mystery becomes an information-design reveal, not a dramatic medical story.",
@@ -124,6 +125,7 @@ VIDEOS["video-02"] = {
     "title": "The Question That Keeps Coming Back",
     "lens": "Project Lead lens",
     "runtime": 132,
+    "next": ("#rationale", "Content Rationale"),
     "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
     "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
     "mood": "Dry editorial wit, short contrasts, and purposeful restraint. The repeated answer card brings a question into focus.",
@@ -364,6 +366,7 @@ def section(vid, d):
           <div class="why">{why}
           </div>
         </div>
+        <a class="next reveal" href="{d["next"][0]}"><span>Next</span>{html.escape(d["next"][1])}<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8.5 3.5L13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
     <!-- {vid.upper()}:END -->
