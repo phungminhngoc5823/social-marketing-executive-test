@@ -1680,7 +1680,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
   box-shadow: 0 0 0 6px var(--white);
   margin-bottom: 8px;
 }
-.steps__title { font-size: 16px; font-weight: 700; color: var(--slate-900); }
+.steps__title { font-size: 16px; font-weight: 700; line-height: 1.35; color: var(--slate-900); }
 .steps__txt { font-size: 14px; line-height: 1.55; color: var(--slate-600); }
 
 .ai {
