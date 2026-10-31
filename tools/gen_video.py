@@ -86,7 +86,7 @@ VIDEOS = {
                           ("70–84s", "The animated steps reveal [[WHAT NOW?]], [[WHAT NEXT?]] and a yellow [[WHY?]] note, using simple motion to explain rather than just list. The music/SFX-only hold lets the sequence finish and remain readable.")],
             },
             {
-                "t": (84, 101), "name": "Same facts, new order",
+                "t": (84, 101), "name": "Same information, clearer explanation",
                 "vo": (84, 100, "The facts are the same. So are the medical steps. What changes is the explanation. Now the steps are easy to find in the order they’re needed. And the why is visible."),
                 "sfx": [(100, 101, "Underline finishes; two layouts hold side by side.")],
                 "shots": [("84–93s", "Continue the SAME two-column composition, adding [[AS WRITTEN]] and [[AS USED]]. On the left, the complete A/B/C information remains across [[OVERVIEW / TIMING / NOTES]]. On the right, the animated explanation shows A → B → C in the unchanged required clinical sequence, with visual cues."),
@@ -101,10 +101,10 @@ VIDEOS = {
             },
             {
                 "t": (113, 129), "name": "Call to action",
-                "vo": (113, 125, "The consultation ends. The explanation still has to work. Bring one hard-to-use instruction to a 30-minute call with a learning designer. No deck required."),
+                "vo": (113, 125, "The consultation ends. The explanation still has to work. Bring one difficult instruction to a 30-minute call with a learning designer. No deck required."),
                 "sfx": [(125, 129, "CTA holds for 1s; then F logo and flearning wordmark animate over 3s.")],
                 "shots": [("113–120s", "Return to the clinic and kitchen-table illustrations, joined by the orange information line. On-screen: [[DESIGN FOR THE SECOND MOMENT.]]"),
-                          ("120–126s", "CTA [[BRING ONE HARD-TO-USE INSTRUCTION]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]."),
+                          ("120–126s", "CTA [[BRING ONE DIFFICULT INSTRUCTION]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]."),
                           ("126–129s", "Animated F then flearning wordmark.")],
             },
         ],
@@ -125,7 +125,7 @@ VIDEOS["video-02"] = {
     "lens": "Project Lead lens",
     "runtime": 132,
     "meta": ["LinkedIn 4:5 (assumed)", "~132s", "VO 115–125 wpm + silent visual beats"],
-    "stats": [("216", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
+    "stats": [("217", "VO words"), ("118", "wpm average"), ("22s", "music + SFX only"), ("9", "beats")],
     "mood": "Light and practical, with a touch of dry humour, like a colleague spotting a pattern at their desk. Quick contrasts, steady pacing, a clear answer at the end.",
     "theme": "An answer can exist in the materials without reaching every patient in a useful form.",
     "concept": "<mark>One clinical source. Different patient needs.</mark> Diagnose the gap before choosing the format.",
@@ -193,9 +193,9 @@ VIDEOS["video-02"] = {
         },
         {
             "t": (119, 132), "name": "Call to action",
-            "vo": (119, 129, "Which patient question keeps coming back? Bring it to a 30-minute call with a learning designer. No deck required."),
+            "vo": (119, 129, "Which question does your team keep answering? Bring it to a 30-minute call with a learning designer. No deck required."),
             "sfx": [(129, 132, "F draws first; ‘flearning’ wordmark resolves.")],
-            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[WHICH PATIENT QUESTION KEEPS COMING BACK?]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
+            "shots": [(None, "Return to the opening desk and answer cards. The Project Lead places the recurring question on the yellow brief and circles it in orange. CTA: [[WHICH QUESTION DOES YOUR TEAM KEEP ANSWERING?]] / [[BOOK A 30-MINUTE PATIENT EDUCATION CALL]] / [[NO DECK REQUIRED]]. Hold the CTA; final 3s: F animation followed by the flearning wordmark.")],
         },
     ],
     "why": [
@@ -281,12 +281,6 @@ def section(vid, d):
     prog = "".join(
         f'<span class="sprog__seg" style="--w:{(r["t"][1] - r["t"][0]) / d["runtime"] * 100:.3f}" data-seg="{i}"></span>'
         for i, r in enumerate(d["rows"]))
-    why = "".join(f'''
-            <article class="why__card reveal" style="--d:{i}">
-              <span class="why__n">{i + 1}</span>
-              <h4 class="why__title">{t}</h4>
-              <p>{html.escape(x)}</p>
-            </article>''' for i, (t, x) in enumerate(d["why"]))
     return f'''    <!-- {vid.upper()}:START -->
     <section class="section section--video section--{d["v"]}" id="{vid}" aria-labelledby="{vid}-title" data-video>
       <div class="container">
@@ -358,12 +352,6 @@ def section(vid, d):
           </div>
         </div>
 
-        <!-- D · Why this direction -->
-        <div class="block">
-          <h3 class="block__title reveal"><span class="block__tag">D</span> Why this direction</h3>
-          <div class="why">{why}
-          </div>
-        </div>
       </div>
     </section>
     <!-- {vid.upper()}:END -->
